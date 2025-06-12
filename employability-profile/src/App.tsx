@@ -84,6 +84,8 @@ const events = [
     details: "This activity helped me understand how to strategically log and reflect on extracurricular activities for professional recognition."
   }
 ];
+type EventType = typeof events[0];
+
 
 function WelcomePage() {
   return (
@@ -106,7 +108,7 @@ function WelcomePage() {
   );
 }
 
-function EventDetail({ event }) {
+function EventDetail({ event }: { event: EventType }) {
   return (
     <div className="detail-page" style={{ backgroundColor: '#fff', color: '#000', minHeight: '100vh', padding: '2rem' }}>
       <h1>{event.title}</h1>
